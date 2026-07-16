@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TikTok Auth Callback</title>
+<style>body{font-family:-apple-system,sans-serif;max-width:600px;margin:60px auto;text-align:center;padding:0 20px}
+textarea{width:100%;font-size:16px;padding:10px;margin-top:20px}</style>
+</head>
+<body>
+<h2>Authorization complete</h2>
+<p>Copy the code below and paste it back to the assistant:</p>
+<textarea id="code" rows="5" readonly></textarea>
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById('code').value = params.get('code') || '(no code found in URL — check for an error param instead)';
+</script>
+</body>
+</html>
